@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">MrPotatohead</string>
+
+    <string name="body">body</string>
+    <string name="arms">arms</string>
+    <string name="ears">ears</string>
+    <string name="eyebrows">eyebrows</string>
+    <string name="eyes">eyes</string>
+    <string name="glasses">glasses</string>
+    <string name="hat">hat</string>
+    <string name="mouth">mouth</string>
+    <string name="mustache">mustache</string>
+    <string name="nose">nose</string>
+    <string name="shoes">shoes</string>
+
+    <string name="bodydesc">The body of Mr Potatohead</string>
+    <string name="armsdesc">The arms of Mr Potatohead</string>
+    <string name="earsdesc">The ears of Mr Potatohead</string>
+    <string name="eyebrowsdesc">The eyebrows of Mr Potatohead</string>
+    <string name="eyesdesc">The eyes of Mr Potatohead</string>
+    <string name="glassesdesc">The glasses of Mr Potatohead</string>
+    <string name="hatdesc">The hat of Mr Potatohead</string>
+    <string name="mouthdesc">The mouth of Mr Potatohead</string>
+    <string name="mustachedesc">The mustache of Mr Potatohead</string>
+    <string name="nosedesc">The nose of Mr Potatohead</string>
+    <string name="shoesdesc">The shoes of Mr Potatohead</string>
+
+    <string name="command">Check the boxes to dress Mr. Potatohead!</string>
+</resources>
