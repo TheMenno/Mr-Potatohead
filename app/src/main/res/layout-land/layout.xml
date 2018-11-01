@@ -134,7 +134,7 @@
                     android:id="@+id/armsBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="armsClicked"
+                    android:onClick="Clicked"
                     android:text="@string/arms"
                     tools:layout_editor_absoluteX="34dp"
                     tools:layout_editor_absoluteY="331dp" />
@@ -143,7 +143,7 @@
                     android:id="@+id/earsBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="earsClicked"
+                    android:onClick="Clicked"
                     android:text="@string/ears"
                     tools:layout_editor_absoluteX="34dp"
                     tools:layout_editor_absoluteY="331dp" />
@@ -152,7 +152,7 @@
                     android:id="@+id/eyebrowsBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="eyebrowsClicked"
+                    android:onClick="Clicked"
                     android:text="@string/eyebrows"
                     tools:layout_editor_absoluteX="34dp"
                     tools:layout_editor_absoluteY="363dp" />
@@ -161,7 +161,7 @@
                     android:id="@+id/eyesBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="eyesClicked"
+                    android:onClick="Clicked"
                     android:text="@string/eyes"
                     tools:layout_editor_absoluteX="34dp"
                     tools:layout_editor_absoluteY="397dp" />
@@ -170,7 +170,7 @@
                     android:id="@+id/glassesBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="glassesClicked"
+                    android:onClick="Clicked"
                     android:text="@string/glasses"
                     tools:layout_editor_absoluteX="34dp"
                     tools:layout_editor_absoluteY="429dp" />
@@ -185,7 +185,7 @@
                     android:id="@+id/hatBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="hatClicked"
+                    android:onClick="Clicked"
                     android:text="@string/hat"
                     tools:layout_editor_absoluteX="34dp"
                     tools:layout_editor_absoluteY="462dp" />
@@ -194,7 +194,7 @@
                     android:id="@+id/mouthBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="mouthClicked"
+                    android:onClick="Clicked"
                     android:text="@string/mouth"
                     tools:layout_editor_absoluteX="198dp"
                     tools:layout_editor_absoluteY="331dp" />
@@ -203,7 +203,7 @@
                     android:id="@+id/mustacheBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="mustacheClicked"
+                    android:onClick="Clicked"
                     android:text="@string/mustache"
                     tools:layout_editor_absoluteX="198dp"
                     tools:layout_editor_absoluteY="363dp" />
@@ -212,7 +212,7 @@
                     android:id="@+id/noseBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="noseClicked"
+                    android:onClick="Clicked"
                     android:text="@string/nose"
                     tools:layout_editor_absoluteX="198dp"
                     tools:layout_editor_absoluteY="405dp" />
@@ -221,7 +221,7 @@
                     android:id="@+id/shoesBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="shoesClicked"
+                    android:onClick="Clicked"
                     android:text="@string/shoes"
                     tools:layout_editor_absoluteX="198dp"
                     tools:layout_editor_absoluteY="437dp" />

@@ -129,7 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/arms"
-                android:onClick="armsClicked"
+                android:onClick="Clicked"
                 tools:layout_editor_absoluteX="34dp"
                 tools:layout_editor_absoluteY="331dp" />
 
@@ -138,7 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ears"
-                android:onClick="earsClicked"
+                android:onClick="Clicked"
                 tools:layout_editor_absoluteX="34dp"
                 tools:layout_editor_absoluteY="331dp" />
 
@@ -147,7 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/eyebrows"
-                android:onClick="eyebrowsClicked"
+                android:onClick="Clicked"
                 tools:layout_editor_absoluteX="34dp"
                 tools:layout_editor_absoluteY="363dp" />
 
@@ -156,7 +156,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/eyes"
-                android:onClick="eyesClicked"
+                android:onClick="Clicked"
                 tools:layout_editor_absoluteX="34dp"
                 tools:layout_editor_absoluteY="397dp" />
 
@@ -165,7 +165,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/glasses"
-                android:onClick="glassesClicked"
+                android:onClick="Clicked"
                 tools:layout_editor_absoluteX="34dp"
                 tools:layout_editor_absoluteY="429dp" />
         </LinearLayout>
@@ -180,7 +180,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hat"
-                android:onClick="hatClicked"
+                android:onClick="Clicked"
                 tools:layout_editor_absoluteX="34dp"
                 tools:layout_editor_absoluteY="462dp" />
 
@@ -189,7 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/mouth"
-                android:onClick="mouthClicked"
+                android:onClick="Clicked"
                 tools:layout_editor_absoluteX="198dp"
                 tools:layout_editor_absoluteY="331dp" />
 
@@ -198,7 +198,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/mustache"
-                android:onClick="mustacheClicked"
+                android:onClick="Clicked"
                 tools:layout_editor_absoluteX="198dp"
                 tools:layout_editor_absoluteY="363dp" />
 
@@ -207,7 +207,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nose"
-                android:onClick="noseClicked"
+                android:onClick="Clicked"
                 tools:layout_editor_absoluteX="198dp"
                 tools:layout_editor_absoluteY="405dp" />
 
@@ -216,11 +216,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/shoes"
-                android:onClick="shoesClicked"
+                android:onClick="Clicked"
                 tools:layout_editor_absoluteX="198dp"
                 tools:layout_editor_absoluteY="437dp" />
 
         </LinearLayout>
+
     </LinearLayout>
 
 

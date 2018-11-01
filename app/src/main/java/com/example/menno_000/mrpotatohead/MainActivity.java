@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Initiating variables
     ImageView Arms;
     ImageView Ears;
     ImageView Eyebrows;
@@ -19,11 +20,14 @@ public class MainActivity extends AppCompatActivity {
     ImageView Nose;
     ImageView Shoes;
 
+
+    // Setting up basic app settings
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout);
 
+        // Setting the variables to objects in the application
         Arms = findViewById(R.id.arms);
         Ears = findViewById(R.id.ears);
         Eyebrows = findViewById(R.id.eyebrows);
@@ -36,10 +40,13 @@ public class MainActivity extends AppCompatActivity {
         Shoes = findViewById(R.id.shoes);
     }
 
+
+    // Overriding app settings so progress will be saved between swapping views
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
+        // Get the visibility of each object
         Integer visibilityArms = Arms.getVisibility();
         Integer visibilityEars = Ears.getVisibility();
         Integer visibilityEyebrows = Eyebrows.getVisibility();
@@ -51,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         Integer visibilityNose = Nose.getVisibility();
         Integer visibilityShoes = Shoes.getVisibility();
 
+        // Store the visibility of each object
         outState.putInt("VisibilityArms", visibilityArms);
         outState.putInt("VisibilityEars", visibilityEars);
         outState.putInt("VisibilityEyebrows", visibilityEyebrows);
@@ -67,40 +75,35 @@ public class MainActivity extends AppCompatActivity {
     public void onRestoreInstanceState(Bundle inState) {
         super.onRestoreInstanceState(inState);
 
+        // Get the visibility of each object that was stored
         Integer visibilitySaveArms = inState.getInt("VisibilityArms");
-        Arms.setVisibility(visibilitySaveArms);
-
         Integer visibilitySaveEars = inState.getInt("VisibilityEars");
-        Ears.setVisibility(visibilitySaveEars);
-
         Integer visibilitySaveEyebrows = inState.getInt("VisibilityEyebrows");
-        Eyebrows.setVisibility(visibilitySaveEyebrows);
-
         Integer visibilitySaveEyes = inState.getInt("VisibilityEyes");
-        Eyes.setVisibility(visibilitySaveEyes);
-
         Integer visibilitySaveGlasses = inState.getInt("VisibilityGlasses");
-        Glasses.setVisibility(visibilitySaveGlasses);
-
         Integer visibilitySaveHat = inState.getInt("VisibilityHat");
-        Hat.setVisibility(visibilitySaveHat);
-
         Integer visibilitySaveMouth = inState.getInt("VisibilityMouth");
-        Mouth.setVisibility(visibilitySaveMouth);
-
         Integer visibilitySaveMustache = inState.getInt("VisibilityMustache");
-        Mustache.setVisibility(visibilitySaveMustache);
-
         Integer visibilitySaveNose = inState.getInt("VisibilityNose");
-        Nose.setVisibility(visibilitySaveNose);
-
         Integer visibilitySaveShoes = inState.getInt("VisibilityShoes");
+
+        // Set the visibility of each object
+        Arms.setVisibility(visibilitySaveArms);
+        Ears.setVisibility(visibilitySaveEars);
+        Eyebrows.setVisibility(visibilitySaveEyebrows);
+        Eyes.setVisibility(visibilitySaveEyes);
+        Glasses.setVisibility(visibilitySaveGlasses);
+        Hat.setVisibility(visibilitySaveHat);
+        Mouth.setVisibility(visibilitySaveMouth);
+        Mustache.setVisibility(visibilitySaveMustache);
+        Nose.setVisibility(visibilitySaveNose);
         Shoes.setVisibility(visibilitySaveShoes);
 
     }
 
 
-    public void armsClicked(View v) {
+    // This function acts when a checkbox is clicked, and (re)sets the corresponding box visibility
+    public void Clicked(View v) {
         CheckBox checkbox = (CheckBox) v;
         Boolean check = checkbox.isChecked();
 
@@ -112,11 +115,6 @@ public class MainActivity extends AppCompatActivity {
                     Arms.setVisibility(View.INVISIBLE);
                 }
         }
-    }
-
-    public void earsClicked(View v) {
-        CheckBox checkbox = (CheckBox) v;
-        Boolean check = checkbox.isChecked();
 
         switch (v.getId()) {
             case R.id.earsBox:
@@ -126,11 +124,6 @@ public class MainActivity extends AppCompatActivity {
                     Ears.setVisibility(View.INVISIBLE);
                 }
         }
-    }
-
-    public void eyebrowsClicked(View v) {
-        CheckBox checkbox = (CheckBox) v;
-        Boolean check = checkbox.isChecked();
 
         switch (v.getId()) {
             case R.id.eyebrowsBox:
@@ -140,11 +133,6 @@ public class MainActivity extends AppCompatActivity {
                     Eyebrows.setVisibility(View.INVISIBLE);
                 }
         }
-    }
-
-    public void eyesClicked(View v) {
-        CheckBox checkbox = (CheckBox) v;
-        Boolean check = checkbox.isChecked();
 
         switch (v.getId()) {
             case R.id.eyesBox:
@@ -154,11 +142,6 @@ public class MainActivity extends AppCompatActivity {
                     Eyes.setVisibility(View.INVISIBLE);
                 }
         }
-    }
-
-    public void glassesClicked(View v) {
-        CheckBox checkbox = (CheckBox) v;
-        Boolean check = checkbox.isChecked();
 
         switch (v.getId()) {
             case R.id.glassesBox:
@@ -168,11 +151,6 @@ public class MainActivity extends AppCompatActivity {
                     Glasses.setVisibility(View.INVISIBLE);
                 }
         }
-    }
-
-    public void hatClicked(View v) {
-        CheckBox checkbox = (CheckBox) v;
-        Boolean check = checkbox.isChecked();
 
         switch (v.getId()) {
             case R.id.hatBox:
@@ -182,11 +160,6 @@ public class MainActivity extends AppCompatActivity {
                     Hat.setVisibility(View.INVISIBLE);
                 }
         }
-    }
-
-    public void mouthClicked(View v) {
-        CheckBox checkbox = (CheckBox) v;
-        Boolean check = checkbox.isChecked();
 
         switch (v.getId()) {
             case R.id.mouthBox:
@@ -196,11 +169,6 @@ public class MainActivity extends AppCompatActivity {
                     Mouth.setVisibility(View.INVISIBLE);
                 }
         }
-    }
-
-    public void mustacheClicked(View v) {
-        CheckBox checkbox = (CheckBox) v;
-        Boolean check = checkbox.isChecked();
 
         switch (v.getId()) {
             case R.id.mustacheBox:
@@ -210,11 +178,6 @@ public class MainActivity extends AppCompatActivity {
                     Mustache.setVisibility(View.INVISIBLE);
                 }
         }
-    }
-
-    public void noseClicked(View v) {
-        CheckBox checkbox = (CheckBox) v;
-        Boolean check = checkbox.isChecked();
 
         switch (v.getId()) {
             case R.id.noseBox:
@@ -224,11 +187,6 @@ public class MainActivity extends AppCompatActivity {
                     Nose.setVisibility(View.INVISIBLE);
                 }
         }
-    }
-
-    public void shoesClicked(View v) {
-        CheckBox checkbox = (CheckBox) v;
-        Boolean check = checkbox.isChecked();
 
         switch (v.getId()) {
             case R.id.shoesBox:
