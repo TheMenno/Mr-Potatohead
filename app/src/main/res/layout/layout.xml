@@ -17,88 +17,88 @@
 
         <ImageView
             android:id="@+id/body"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:visibility="visible"
             android:contentDescription="@string/bodydesc"
             app:srcCompat="@drawable/body" />
 
         <ImageView
             android:id="@+id/arms"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:visibility="invisible"
             android:contentDescription="@string/armsdesc"
             app:srcCompat="@drawable/arms" />
 
         <ImageView
             android:id="@+id/ears"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:visibility="invisible"
             android:contentDescription="@string/earsdesc"
             app:srcCompat="@drawable/ears" />
 
         <ImageView
             android:id="@+id/eyebrows"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:visibility="invisible"
             android:contentDescription="@string/eyebrowsdesc"
             app:srcCompat="@drawable/eyebrows" />
 
         <ImageView
             android:id="@+id/eyes"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:visibility="invisible"
             android:contentDescription="@string/eyesdesc"
             app:srcCompat="@drawable/eyes" />
 
         <ImageView
             android:id="@+id/glasses"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:visibility="invisible"
             android:contentDescription="@string/glassesdesc"
             app:srcCompat="@drawable/glasses" />
 
         <ImageView
             android:id="@+id/hat"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:visibility="invisible"
             android:contentDescription="@string/hatdesc"
             app:srcCompat="@drawable/hat" />
 
         <ImageView
             android:id="@+id/mouth"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:visibility="invisible"
             android:contentDescription="@string/mouthdesc"
             app:srcCompat="@drawable/mouth" />
 
         <ImageView
             android:id="@+id/mustache"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:visibility="invisible"
             android:contentDescription="@string/mustachedesc"
             app:srcCompat="@drawable/mustache" />
 
         <ImageView
             android:id="@+id/nose"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:visibility="invisible"
             android:contentDescription="@string/nosedesc"
             app:srcCompat="@drawable/nose" />
 
         <ImageView
             android:id="@+id/shoes"
-            android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:visibility="invisible"
             android:contentDescription="@string/shoesdesc"
             app:srcCompat="@drawable/shoes" />
@@ -224,5 +224,27 @@
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/fullyDressed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fullyDressed"
+            android:onClick="fullyDressedClicked" />
+
+        <Button
+            android:id="@+id/potato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/potato"
+            android:onClick="potatoClicked" />
+
+    </LinearLayout>
 
 </LinearLayout>

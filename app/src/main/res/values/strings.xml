@@ -26,4 +26,7 @@
     <string name="shoesdesc">The shoes of Mr Potatohead</string>
 
     <string name="command">Check the boxes to dress Mr. Potatohead!</string>
+
+    <string name="fullyDressed">Put everything on</string>
+    <string name="potato">Remove everything</string>
 </resources>

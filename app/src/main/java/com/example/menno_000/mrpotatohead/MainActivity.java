@@ -9,16 +9,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     // Initiating variables
-    ImageView Arms;
-    ImageView Ears;
-    ImageView Eyebrows;
-    ImageView Eyes;
-    ImageView Glasses;
-    ImageView Hat;
-    ImageView Mouth;
-    ImageView Mustache;
-    ImageView Nose;
-    ImageView Shoes;
+    ImageView Arms, Ears, Eyebrows, Eyes, Glasses, Hat, Mouth, Mustache, Nose, Shoes;
 
 
     // Setting up basic app settings
@@ -71,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt("VisibilityShoes", visibilityShoes);
     }
 
+    // Overriding app settings so progress will be saved between swapping views
     @Override
     public void onRestoreInstanceState(Bundle inState) {
         super.onRestoreInstanceState(inState);
@@ -196,5 +188,84 @@ public class MainActivity extends AppCompatActivity {
                     Shoes.setVisibility(View.INVISIBLE);
                 }
         }
+    }
+
+
+    // This function acts when a 'fully dress' button is clicked, and fully dresses Mr. Potatohead
+    public void fullyDressedClicked(View v) {
+        // Set the visibility of all objects
+        Arms.setVisibility(View.VISIBLE);
+        Ears.setVisibility(View.VISIBLE);
+        Eyebrows.setVisibility(View.VISIBLE);
+        Eyes.setVisibility(View.VISIBLE);
+        Glasses.setVisibility(View.VISIBLE);
+        Hat.setVisibility(View.VISIBLE);
+        Mouth.setVisibility(View.VISIBLE);
+        Mustache.setVisibility(View.VISIBLE);
+        Nose.setVisibility(View.VISIBLE);
+        Shoes.setVisibility(View.VISIBLE);
+
+        // Assign each object to a new variable
+        CheckBox armsOn = findViewById(R.id.armsBox);
+        CheckBox earsOn = findViewById(R.id.earsBox);
+        CheckBox eyebrowsOn = findViewById(R.id.eyebrowsBox);
+        CheckBox eyesOn = findViewById(R.id.eyesBox);
+        CheckBox glassesOn = findViewById(R.id.glassesBox);
+        CheckBox hatOn = findViewById(R.id.hatBox);
+        CheckBox mouthOn = findViewById(R.id.mouthBox);
+        CheckBox mustacheOn = findViewById(R.id.mustacheBox);
+        CheckBox noseOn = findViewById(R.id.noseBox);
+        CheckBox shoesOn = findViewById(R.id.shoesBox);
+
+        // Check the checkboxes of all objects
+        armsOn.setChecked(true);
+        earsOn.setChecked(true);
+        eyebrowsOn.setChecked(true);
+        eyesOn.setChecked(true);
+        glassesOn.setChecked(true);
+        hatOn.setChecked(true);
+        mouthOn.setChecked(true);
+        mustacheOn.setChecked(true);
+        noseOn.setChecked(true);
+        shoesOn.setChecked(true);
+    }
+
+
+    // This function acts when a 'undress' box is clicked, and fully undresses Mr. Potatohead
+    public void potatoClicked(View v) {
+        Arms.setVisibility(View.INVISIBLE);
+        Ears.setVisibility(View.INVISIBLE);
+        Eyebrows.setVisibility(View.INVISIBLE);
+        Eyes.setVisibility(View.INVISIBLE);
+        Glasses.setVisibility(View.INVISIBLE);
+        Hat.setVisibility(View.INVISIBLE);
+        Mouth.setVisibility(View.INVISIBLE);
+        Mustache.setVisibility(View.INVISIBLE);
+        Nose.setVisibility(View.INVISIBLE);
+        Shoes.setVisibility(View.INVISIBLE);
+
+        // Assign each object to a new variable
+        CheckBox armsOff = findViewById(R.id.armsBox);
+        CheckBox earsOff = findViewById(R.id.earsBox);
+        CheckBox eyebrowsOff = findViewById(R.id.eyebrowsBox);
+        CheckBox eyesOff = findViewById(R.id.eyesBox);
+        CheckBox glassesOff = findViewById(R.id.glassesBox);
+        CheckBox hatOff = findViewById(R.id.hatBox);
+        CheckBox mouthOff = findViewById(R.id.mouthBox);
+        CheckBox mustacheOff = findViewById(R.id.mustacheBox);
+        CheckBox noseOff = findViewById(R.id.noseBox);
+        CheckBox shoesOff = findViewById(R.id.shoesBox);
+
+        // Uncheck the checkboxes of all objects
+        armsOff.setChecked(false);
+        earsOff.setChecked(false);
+        eyebrowsOff.setChecked(false);
+        eyesOff.setChecked(false);
+        glassesOff.setChecked(false);
+        hatOff.setChecked(false);
+        mouthOff.setChecked(false);
+        mustacheOff.setChecked(false);
+        noseOff.setChecked(false);
+        shoesOff.setChecked(false);
     }
 }
