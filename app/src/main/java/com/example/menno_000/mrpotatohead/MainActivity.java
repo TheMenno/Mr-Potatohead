@@ -3,13 +3,15 @@ package com.example.menno_000.mrpotatohead;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
     // Initiating variables
-    ImageView Arms, Ears, Eyebrows, Eyes, Glasses, Hat, Mouth, Mustache, Nose, Shoes;
+    ImageView imageArms, imageEars, imageEyebrows, imageEyes, imageGlasses, imageHat, imageMouth,
+            imageMustache, imageNose, imageShoes;
     CheckBox arms, ears, eyebrows, eyes, glasses, hat, mouth, mustache, nose, shoes;
 
 
@@ -20,16 +22,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.layout);
 
         // Setting variables to views in the application
-        Arms = findViewById(R.id.arms);
-        Ears = findViewById(R.id.ears);
-        Eyebrows = findViewById(R.id.eyebrows);
-        Eyes = findViewById(R.id.eyes);
-        Glasses = findViewById(R.id.glasses);
-        Hat = findViewById(R.id.hat);
-        Mouth = findViewById(R.id.mouth);
-        Mustache = findViewById(R.id.mustache);
-        Nose = findViewById(R.id.nose);
-        Shoes = findViewById(R.id.shoes);
+        imageArms = findViewById(R.id.arms);
+        imageEars = findViewById(R.id.ears);
+        imageEyebrows = findViewById(R.id.eyebrows);
+        imageEyes = findViewById(R.id.eyes);
+        imageGlasses = findViewById(R.id.glasses);
+        imageHat = findViewById(R.id.hat);
+        imageMouth = findViewById(R.id.mouth);
+        imageMustache = findViewById(R.id.mustache);
+        imageNose = findViewById(R.id.nose);
+        imageShoes = findViewById(R.id.shoes);
 
         // Setting variables to checkboxes in the application
         arms = findViewById(R.id.armsBox);
@@ -42,6 +44,94 @@ public class MainActivity extends AppCompatActivity {
         mustache = findViewById(R.id.mustacheBox);
         nose = findViewById(R.id.noseBox);
         shoes = findViewById(R.id.shoesBox);
+
+        // Setting up the listeners for the checkboxes
+        findViewById(R.id.armsBox).setOnClickListener(new MainActivity.CheckboxListener());
+        findViewById(R.id.earsBox).setOnClickListener(new MainActivity.CheckboxListener());
+        findViewById(R.id.eyebrowsBox).setOnClickListener(new MainActivity.CheckboxListener());
+        findViewById(R.id.eyesBox).setOnClickListener(new MainActivity.CheckboxListener());
+        findViewById(R.id.glassesBox).setOnClickListener(new MainActivity.CheckboxListener());
+        findViewById(R.id.hatBox).setOnClickListener(new MainActivity.CheckboxListener());
+        findViewById(R.id.mouthBox).setOnClickListener(new MainActivity.CheckboxListener());
+        findViewById(R.id.mustacheBox).setOnClickListener(new MainActivity.CheckboxListener());
+        findViewById(R.id.noseBox).setOnClickListener(new MainActivity.CheckboxListener());
+        findViewById(R.id.shoesBox).setOnClickListener(new MainActivity.CheckboxListener());
+
+        // Setting up the listeners for the buttons
+        findViewById(R.id.fullyDressed).setOnClickListener(new MainActivity.ButtonListener());
+        findViewById(R.id.potato).setOnClickListener(new MainActivity.ButtonListener());
+    }
+
+
+    // Listener for the "Dress" and "Undress" buttons
+    public class CheckboxListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View view) {
+            CheckBox checkbox = (CheckBox) view;
+            Boolean check = checkbox.isChecked();
+
+            // Get the right checkbox, and set the corresponding image
+            switch (view.getId()) {
+                case R.id.armsBox:
+                    visibilitySetter(imageArms, check);
+                    break;
+
+                case R.id.earsBox:
+                    visibilitySetter(imageEars, check);
+                    break;
+
+                case R.id.eyebrowsBox:
+                    visibilitySetter(imageEyebrows, check);
+                    break;
+
+                case R.id.eyesBox:
+                    visibilitySetter(imageEyes, check);
+                    break;
+
+                case R.id.glassesBox:
+                    visibilitySetter(imageGlasses, check);
+                    break;
+
+                case R.id.hatBox:
+                    visibilitySetter(imageHat, check);
+                    break;
+
+                case R.id.mouthBox:
+                    visibilitySetter(imageMouth, check);
+                    break;
+
+                case R.id.mustacheBox:
+                    visibilitySetter(imageMustache, check);
+                    break;
+
+                case R.id.noseBox:
+                    visibilitySetter(imageNose, check);
+                    break;
+
+                case R.id.shoesBox:
+                    visibilitySetter(imageShoes, check);
+                    break;
+            }
+        }
+    }
+
+
+    // Listener for the "Dress" and "Undress" buttons
+    public class ButtonListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View view) {
+
+            switch(view.getId()) {
+                case R.id.fullyDressed:
+                    fullyDressedClicked();
+                    break;
+                case R.id.potato:
+                    potatoClicked();
+                    break;
+            }
+        }
     }
 
 
@@ -51,16 +141,16 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
 
         // Get the visibility of each object
-        Integer visibilityArms = Arms.getVisibility();
-        Integer visibilityEars = Ears.getVisibility();
-        Integer visibilityEyebrows = Eyebrows.getVisibility();
-        Integer visibilityEyes = Eyes.getVisibility();
-        Integer visibilityGlasses = Glasses.getVisibility();
-        Integer visibilityHat = Hat.getVisibility();
-        Integer visibilityMouth = Mouth.getVisibility();
-        Integer visibilityMustache = Mustache.getVisibility();
-        Integer visibilityNose = Nose.getVisibility();
-        Integer visibilityShoes = Shoes.getVisibility();
+        Integer visibilityArms = imageArms.getVisibility();
+        Integer visibilityEars = imageEars.getVisibility();
+        Integer visibilityEyebrows = imageEyebrows.getVisibility();
+        Integer visibilityEyes = imageEyes.getVisibility();
+        Integer visibilityGlasses = imageGlasses.getVisibility();
+        Integer visibilityHat = imageHat.getVisibility();
+        Integer visibilityMouth = imageMouth.getVisibility();
+        Integer visibilityMustache = imageMustache.getVisibility();
+        Integer visibilityNose = imageNose.getVisibility();
+        Integer visibilityShoes = imageShoes.getVisibility();
 
         // Store the visibility of each object
         outState.putInt("VisibilityArms", visibilityArms);
@@ -93,67 +183,16 @@ public class MainActivity extends AppCompatActivity {
         Integer visibilitySaveShoes = inState.getInt("VisibilityShoes");
 
         // Set the visibility of each object
-        Arms.setVisibility(visibilitySaveArms);
-        Ears.setVisibility(visibilitySaveEars);
-        Eyebrows.setVisibility(visibilitySaveEyebrows);
-        Eyes.setVisibility(visibilitySaveEyes);
-        Glasses.setVisibility(visibilitySaveGlasses);
-        Hat.setVisibility(visibilitySaveHat);
-        Mouth.setVisibility(visibilitySaveMouth);
-        Mustache.setVisibility(visibilitySaveMustache);
-        Nose.setVisibility(visibilitySaveNose);
-        Shoes.setVisibility(visibilitySaveShoes);
-
-    }
-
-
-    // Acts when a checkbox is clicked, and (re)sets the corresponding box visibility
-    public void Clicked(View v) {
-        CheckBox checkbox = (CheckBox) v;
-        Boolean check = checkbox.isChecked();
-
-        // Get the right checkbox, and set the corresponding image
-        switch (v.getId()) {
-            case R.id.armsBox:
-                visibilitySetter(Arms, check);
-                break;
-
-            case R.id.earsBox:
-                visibilitySetter(Ears, check);
-                break;
-
-            case R.id.eyebrowsBox:
-                visibilitySetter(Eyebrows, check);
-                break;
-
-            case R.id.eyesBox:
-                visibilitySetter(Eyes, check);
-                break;
-
-            case R.id.glassesBox:
-                visibilitySetter(Glasses, check);
-                break;
-
-            case R.id.hatBox:
-                visibilitySetter(Hat, check);
-                break;
-
-            case R.id.mouthBox:
-                visibilitySetter(Mouth, check);
-                break;
-
-            case R.id.mustacheBox:
-                visibilitySetter(Mustache, check);
-                break;
-
-            case R.id.noseBox:
-                visibilitySetter(Nose, check);
-                break;
-
-            case R.id.shoesBox:
-                visibilitySetter(Shoes, check);
-                break;
-        }
+        imageArms.setVisibility(visibilitySaveArms);
+        imageEars.setVisibility(visibilitySaveEars);
+        imageEyebrows.setVisibility(visibilitySaveEyebrows);
+        imageEyes.setVisibility(visibilitySaveEyes);
+        imageGlasses.setVisibility(visibilitySaveGlasses);
+        imageHat.setVisibility(visibilitySaveHat);
+        imageMouth.setVisibility(visibilitySaveMouth);
+        imageMustache.setVisibility(visibilitySaveMustache);
+        imageNose.setVisibility(visibilitySaveNose);
+        imageShoes.setVisibility(visibilitySaveShoes);
     }
 
 
@@ -168,19 +207,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     // Acts when a 'fully dress' button is clicked, and fully dresses Mr. Potatohead
-    public void fullyDressedClicked(View v) {
+    public void fullyDressedClicked() {
 
         // Set the visibility of all views
-        Arms.setVisibility(View.VISIBLE);
-        Ears.setVisibility(View.VISIBLE);
-        Eyebrows.setVisibility(View.VISIBLE);
-        Eyes.setVisibility(View.VISIBLE);
-        Glasses.setVisibility(View.VISIBLE);
-        Hat.setVisibility(View.VISIBLE);
-        Mouth.setVisibility(View.VISIBLE);
-        Mustache.setVisibility(View.VISIBLE);
-        Nose.setVisibility(View.VISIBLE);
-        Shoes.setVisibility(View.VISIBLE);
+        imageArms.setVisibility(View.VISIBLE);
+        imageEars.setVisibility(View.VISIBLE);
+        imageEyebrows.setVisibility(View.VISIBLE);
+        imageEyes.setVisibility(View.VISIBLE);
+        imageGlasses.setVisibility(View.VISIBLE);
+        imageHat.setVisibility(View.VISIBLE);
+        imageMouth.setVisibility(View.VISIBLE);
+        imageMustache.setVisibility(View.VISIBLE);
+        imageNose.setVisibility(View.VISIBLE);
+        imageShoes.setVisibility(View.VISIBLE);
 
         // Check the corresponding checkboxes of all views
         arms.setChecked(true);
@@ -197,19 +236,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     // Acts when a 'undress' box is clicked, and fully undresses Mr. Potatohead
-    public void potatoClicked(View v) {
+    public void potatoClicked() {
 
         // Set the visibility of all views
-        Arms.setVisibility(View.INVISIBLE);
-        Ears.setVisibility(View.INVISIBLE);
-        Eyebrows.setVisibility(View.INVISIBLE);
-        Eyes.setVisibility(View.INVISIBLE);
-        Glasses.setVisibility(View.INVISIBLE);
-        Hat.setVisibility(View.INVISIBLE);
-        Mouth.setVisibility(View.INVISIBLE);
-        Mustache.setVisibility(View.INVISIBLE);
-        Nose.setVisibility(View.INVISIBLE);
-        Shoes.setVisibility(View.INVISIBLE);
+        imageArms.setVisibility(View.INVISIBLE);
+        imageEars.setVisibility(View.INVISIBLE);
+        imageEyebrows.setVisibility(View.INVISIBLE);
+        imageEyes.setVisibility(View.INVISIBLE);
+        imageGlasses.setVisibility(View.INVISIBLE);
+        imageHat.setVisibility(View.INVISIBLE);
+        imageMouth.setVisibility(View.INVISIBLE);
+        imageMustache.setVisibility(View.INVISIBLE);
+        imageNose.setVisibility(View.INVISIBLE);
+        imageShoes.setVisibility(View.INVISIBLE);
 
         // Uncheck the corresponding checkboxes of all views
         arms.setChecked(false);
