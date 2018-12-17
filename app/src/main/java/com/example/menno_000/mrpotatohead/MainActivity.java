@@ -10,15 +10,16 @@ public class MainActivity extends AppCompatActivity {
 
     // Initiating variables
     ImageView Arms, Ears, Eyebrows, Eyes, Glasses, Hat, Mouth, Mustache, Nose, Shoes;
+    CheckBox arms, ears, eyebrows, eyes, glasses, hat, mouth, mustache, nose, shoes;
 
 
-    // Setting up basic app settings
+    // Setting up basic functionality
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout);
 
-        // Setting the variables to objects in the application
+        // Setting variables to views in the application
         Arms = findViewById(R.id.arms);
         Ears = findViewById(R.id.ears);
         Eyebrows = findViewById(R.id.eyebrows);
@@ -29,6 +30,18 @@ public class MainActivity extends AppCompatActivity {
         Mustache = findViewById(R.id.mustache);
         Nose = findViewById(R.id.nose);
         Shoes = findViewById(R.id.shoes);
+
+        // Setting variables to checkboxes in the application
+        arms = findViewById(R.id.armsBox);
+        ears = findViewById(R.id.earsBox);
+        eyebrows = findViewById(R.id.eyebrowsBox);
+        eyes = findViewById(R.id.eyesBox);
+        glasses = findViewById(R.id.glassesBox);
+        hat = findViewById(R.id.hatBox);
+        mouth = findViewById(R.id.mouthBox);
+        mustache = findViewById(R.id.mustacheBox);
+        nose = findViewById(R.id.noseBox);
+        shoes = findViewById(R.id.shoesBox);
     }
 
 
@@ -94,106 +107,70 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // This function acts when a checkbox is clicked, and (re)sets the corresponding box visibility
+    // Acts when a checkbox is clicked, and (re)sets the corresponding box visibility
     public void Clicked(View v) {
         CheckBox checkbox = (CheckBox) v;
         Boolean check = checkbox.isChecked();
 
+        // Get the right checkbox, and set the corresponding image
         switch (v.getId()) {
             case R.id.armsBox:
-                if (check) {
-                    Arms.setVisibility(View.VISIBLE);
-                } else {
-                    Arms.setVisibility(View.INVISIBLE);
-                }
-        }
+                visibilitySetter(Arms, check);
+                break;
 
-        switch (v.getId()) {
             case R.id.earsBox:
-                if (check) {
-                    Ears.setVisibility(View.VISIBLE);
-                } else {
-                    Ears.setVisibility(View.INVISIBLE);
-                }
-        }
+                visibilitySetter(Ears, check);
+                break;
 
-        switch (v.getId()) {
             case R.id.eyebrowsBox:
-                if (check) {
-                    Eyebrows.setVisibility(View.VISIBLE);
-                } else {
-                    Eyebrows.setVisibility(View.INVISIBLE);
-                }
-        }
+                visibilitySetter(Eyebrows, check);
+                break;
 
-        switch (v.getId()) {
             case R.id.eyesBox:
-                if (check) {
-                    Eyes.setVisibility(View.VISIBLE);
-                } else {
-                    Eyes.setVisibility(View.INVISIBLE);
-                }
-        }
+                visibilitySetter(Eyes, check);
+                break;
 
-        switch (v.getId()) {
             case R.id.glassesBox:
-                if (check) {
-                    Glasses.setVisibility(View.VISIBLE);
-                } else {
-                    Glasses.setVisibility(View.INVISIBLE);
-                }
-        }
+                visibilitySetter(Glasses, check);
+                break;
 
-        switch (v.getId()) {
             case R.id.hatBox:
-                if (check) {
-                    Hat.setVisibility(View.VISIBLE);
-                } else {
-                    Hat.setVisibility(View.INVISIBLE);
-                }
-        }
+                visibilitySetter(Hat, check);
+                break;
 
-        switch (v.getId()) {
             case R.id.mouthBox:
-                if (check) {
-                    Mouth.setVisibility(View.VISIBLE);
-                } else {
-                    Mouth.setVisibility(View.INVISIBLE);
-                }
-        }
+                visibilitySetter(Mouth, check);
+                break;
 
-        switch (v.getId()) {
             case R.id.mustacheBox:
-                if (check) {
-                    Mustache.setVisibility(View.VISIBLE);
-                } else {
-                    Mustache.setVisibility(View.INVISIBLE);
-                }
-        }
+                visibilitySetter(Mustache, check);
+                break;
 
-        switch (v.getId()) {
             case R.id.noseBox:
-                if (check) {
-                    Nose.setVisibility(View.VISIBLE);
-                } else {
-                    Nose.setVisibility(View.INVISIBLE);
-                }
-        }
+                visibilitySetter(Nose, check);
+                break;
 
-        switch (v.getId()) {
             case R.id.shoesBox:
-                if (check) {
-                    Shoes.setVisibility(View.VISIBLE);
-                } else {
-                    Shoes.setVisibility(View.INVISIBLE);
-                }
+                visibilitySetter(Shoes, check);
+                break;
         }
     }
 
 
-    // This function acts when a 'fully dress' button is clicked, and fully dresses Mr. Potatohead
+    // Sets the visibility of view according to the value of checked
+    public void visibilitySetter(ImageView view, Boolean checked) {
+        if (checked) {
+            view.setVisibility(View.VISIBLE);
+        } else {
+            view.setVisibility(View.INVISIBLE);
+        }
+    }
+
+
+    // Acts when a 'fully dress' button is clicked, and fully dresses Mr. Potatohead
     public void fullyDressedClicked(View v) {
-        // Set the visibility of all objects
+
+        // Set the visibility of all views
         Arms.setVisibility(View.VISIBLE);
         Ears.setVisibility(View.VISIBLE);
         Eyebrows.setVisibility(View.VISIBLE);
@@ -205,34 +182,24 @@ public class MainActivity extends AppCompatActivity {
         Nose.setVisibility(View.VISIBLE);
         Shoes.setVisibility(View.VISIBLE);
 
-        // Assign each object to a new variable
-        CheckBox armsOn = findViewById(R.id.armsBox);
-        CheckBox earsOn = findViewById(R.id.earsBox);
-        CheckBox eyebrowsOn = findViewById(R.id.eyebrowsBox);
-        CheckBox eyesOn = findViewById(R.id.eyesBox);
-        CheckBox glassesOn = findViewById(R.id.glassesBox);
-        CheckBox hatOn = findViewById(R.id.hatBox);
-        CheckBox mouthOn = findViewById(R.id.mouthBox);
-        CheckBox mustacheOn = findViewById(R.id.mustacheBox);
-        CheckBox noseOn = findViewById(R.id.noseBox);
-        CheckBox shoesOn = findViewById(R.id.shoesBox);
-
-        // Check the checkboxes of all objects
-        armsOn.setChecked(true);
-        earsOn.setChecked(true);
-        eyebrowsOn.setChecked(true);
-        eyesOn.setChecked(true);
-        glassesOn.setChecked(true);
-        hatOn.setChecked(true);
-        mouthOn.setChecked(true);
-        mustacheOn.setChecked(true);
-        noseOn.setChecked(true);
-        shoesOn.setChecked(true);
+        // Check the corresponding checkboxes of all views
+        arms.setChecked(true);
+        ears.setChecked(true);
+        eyebrows.setChecked(true);
+        eyes.setChecked(true);
+        glasses.setChecked(true);
+        hat.setChecked(true);
+        mouth.setChecked(true);
+        mustache.setChecked(true);
+        nose.setChecked(true);
+        shoes.setChecked(true);
     }
 
 
-    // This function acts when a 'undress' box is clicked, and fully undresses Mr. Potatohead
+    // Acts when a 'undress' box is clicked, and fully undresses Mr. Potatohead
     public void potatoClicked(View v) {
+
+        // Set the visibility of all views
         Arms.setVisibility(View.INVISIBLE);
         Ears.setVisibility(View.INVISIBLE);
         Eyebrows.setVisibility(View.INVISIBLE);
@@ -244,28 +211,16 @@ public class MainActivity extends AppCompatActivity {
         Nose.setVisibility(View.INVISIBLE);
         Shoes.setVisibility(View.INVISIBLE);
 
-        // Assign each object to a new variable
-        CheckBox armsOff = findViewById(R.id.armsBox);
-        CheckBox earsOff = findViewById(R.id.earsBox);
-        CheckBox eyebrowsOff = findViewById(R.id.eyebrowsBox);
-        CheckBox eyesOff = findViewById(R.id.eyesBox);
-        CheckBox glassesOff = findViewById(R.id.glassesBox);
-        CheckBox hatOff = findViewById(R.id.hatBox);
-        CheckBox mouthOff = findViewById(R.id.mouthBox);
-        CheckBox mustacheOff = findViewById(R.id.mustacheBox);
-        CheckBox noseOff = findViewById(R.id.noseBox);
-        CheckBox shoesOff = findViewById(R.id.shoesBox);
-
-        // Uncheck the checkboxes of all objects
-        armsOff.setChecked(false);
-        earsOff.setChecked(false);
-        eyebrowsOff.setChecked(false);
-        eyesOff.setChecked(false);
-        glassesOff.setChecked(false);
-        hatOff.setChecked(false);
-        mouthOff.setChecked(false);
-        mustacheOff.setChecked(false);
-        noseOff.setChecked(false);
-        shoesOff.setChecked(false);
+        // Uncheck the corresponding checkboxes of all views
+        arms.setChecked(false);
+        ears.setChecked(false);
+        eyebrows.setChecked(false);
+        eyes.setChecked(false);
+        glasses.setChecked(false);
+        hat.setChecked(false);
+        mouth.setChecked(false);
+        mustache.setChecked(false);
+        nose.setChecked(false);
+        shoes.setChecked(false);
     }
 }
