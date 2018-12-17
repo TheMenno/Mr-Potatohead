@@ -136,21 +136,18 @@
                     android:id="@+id/armsBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Clicked"
                     android:text="@string/arms" />
 
                 <CheckBox
                     android:id="@+id/earsBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Clicked"
                     android:text="@string/ears" />
 
                 <CheckBox
                     android:id="@+id/eyebrowsBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Clicked"
                     android:text="@string/eyebrows" />
 
             </LinearLayout>
@@ -164,28 +161,24 @@
                     android:id="@+id/eyesBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Clicked"
                     android:text="@string/eyes" />
 
                 <CheckBox
                     android:id="@+id/glassesBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Clicked"
                     android:text="@string/glasses" />
 
                 <CheckBox
                     android:id="@+id/hatBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Clicked"
                     android:text="@string/hat" />
 
                 <CheckBox
                     android:id="@+id/mouthBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Clicked"
                     android:text="@string/mouth" />
 
             </LinearLayout>
@@ -199,21 +192,18 @@
                     android:id="@+id/mustacheBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Clicked"
                     android:text="@string/mustache" />
 
                 <CheckBox
                     android:id="@+id/noseBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Clicked"
                     android:text="@string/nose" />
 
                 <CheckBox
                     android:id="@+id/shoesBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Clicked"
                     android:text="@string/shoes" />
 
             </LinearLayout>
@@ -230,15 +220,13 @@
                 android:id="@+id/fullyDressed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fullyDressed"
-                android:onClick="fullyDressedClicked"/>
+                android:text="@string/fullyDressed"/>
 
             <Button
                 android:id="@+id/potato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/potato"
-                android:onClick="potatoClicked"/>
+                android:text="@string/potato"/>
 
         </LinearLayout>
 
